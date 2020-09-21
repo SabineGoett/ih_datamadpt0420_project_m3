@@ -8,11 +8,11 @@ It is a supervised learning as the data is labeld. Furthermore a regression mode
 
 In the following steps the development of the model is described. The coding of each step can be found in the respective Jupyter Notebook file. 
 
-**1) Choose_Regression_Model.ipynp
+**1) Choose_Regression_Model.ipynp**
 
-The dataset contains numerical and categorical data. To make the data usable for the ML algorithms the numerical data are standarized with the standard scaler and the categorical data are encoded with onehot encoder. 
+The dataset contains numerical and categorical data. To make the data usable for the ML algorithms the numerical data are standarized with the standard scaler and the categorical data are encoded with onehot encoder. The data is then split into two parts, with the train_test_split. With the bigger part (ca. 30 000 samples) the prediction models shall be trained and with the smaller part (ca. 10.000 samples) the prediction accuracy is measured.
 
-After the preprocessing of the data an effective regression algorithm is searched. Therefore the R² value and the mean squared error of the following logarithm are compared: 
+After the preprocessing and splitting of the data an effective regression algorithm is searched. Therefore the R² value and the mean squared error of the following logarithm are compared: 
 
 	KneighborsRegressor,
 	LinearRegression,
@@ -30,7 +30,7 @@ From the picture it can be seen, that Random Forest and Extra Trees Regressor ha
 
 
 
-**2) Build_a_stacking_model.iypnp
+**2) Build_a_stacking_model.iypnp**
 
 In the second step it is checked if the prediction model can be improved by combining several algorithm. Therefore the stacking model is used. The following algorithms were used as estimators 
 (level0):
